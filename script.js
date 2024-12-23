@@ -50,3 +50,5 @@ function resetButtonStates() {
     playButton.classList.remove("active");
     pauseButton.classList.remove("active");
 }
+
+let x = 1;
