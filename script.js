@@ -9,22 +9,44 @@ const pauseButton = document.getElementById("pause-button");
 squareSquareVid.controls = false;
 
 // Update video source and reload it
-evenButton.addEventListener('click', function() { 
-    squareSquare.textContent = "Nothing!"; 
+evenButton.addEventListener("click", function () {
+    squareSquare.textContent = "Nothing!";
     squareSquareVid.src = "../csp videos/square-square-even.mp4";
     squareSquareVid.load();
-}); 
-oddButton.addEventListener('click', function() { 
-    squareSquare.textContent = "Kite/Kite → Fist/Fist → Pawn/Pawn → Slice on the open layer → Fist/Fist → Kite/Kite"; 
+    resetButtonStates();
+});
+oddButton.addEventListener("click", function () {
+    squareSquare.textContent =
+        "Kite/Kite → Fist/Fist → Pawn/Pawn → Slice on the open layer → Fist/Fist → Kite/Kite";
     squareSquareVid.src = "../csp videos/square-square-odd.mp4";
     squareSquareVid.load();
-}); 
+    resetButtonStates();
+});
 
-// External play and pause controls
-playButton.addEventListener('click', function() {
+// Play button logic
+playButton.addEventListener("click", function () {
     squareSquareVid.play();
+    toggleActiveButton(playButton, pauseButton);
 });
 
-pauseButton.addEventListener('click', function() {
+// Pause button logic
+pauseButton.addEventListener("click", function () {
     squareSquareVid.pause();
+    toggleActiveButton(pauseButton, playButton);
 });
+
+// Reset button states when the video ends
+squareSquareVid.addEventListener("ended", function () {
+    resetButtonStates();
+});
+
+// Helper functions
+function toggleActiveButton(activeButton, inactiveButton) {
+    activeButton.classList.add("active");
+    inactiveButton.classList.remove("active");
+}
+
+function resetButtonStates() {
+    playButton.classList.remove("active");
+    pauseButton.classList.remove("active");
+}

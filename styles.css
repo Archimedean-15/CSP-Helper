@@ -107,6 +107,10 @@ video {
     width: 100%;
 }
 
+strong {
+    font-size: large;
+}
+
 button {
     padding: 10px;
     background-color: hsl(265, 100%, 46%);
@@ -134,9 +138,15 @@ button:hover {
     background-color: hsl(0, 58%, 45%);
 }
 
-strong {
-    font-size: large;
+button.active {
+    filter: brightness(0.7);
 }
+
+
+
+
+
+
 
 
 
