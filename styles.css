@@ -124,17 +124,17 @@ button:hover {
     background-color: hsl(265, 100%, 36%);
 }
 
-#play-button {
+.play-button {
     background-color: hsl(120, 51%, 52%);
 }
-#play-button:hover {
+.play-button:hover {
     background-color: hsl(120, 51%, 42%);
 }
-#pause-button {
+.pause-button {
     background-color: hsl(0, 58%, 55%);
 
 }
-#pause-button:hover {
+.pause-button:hover {
     background-color: hsl(0, 58%, 45%);
 }
 
