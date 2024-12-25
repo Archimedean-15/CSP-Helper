@@ -47,6 +47,8 @@ nav ul li.active a {
     color: #fff;
 }
 
+/* Container Styles */
+
 main {
     margin-top: 20px;
 }
@@ -69,20 +71,6 @@ main {
     gap: 10px;
 }
 
-video {
-    pointer-events: none;
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-    margin-left: auto;
-}
-
-.control-button {
-    flex: 1;
-    text-align: center;
-    padding: 10px;
-}
-
 .description-button-container {
     display: flex;
     flex-direction: column;
@@ -100,15 +88,20 @@ video {
     align-items: center;
 }
 
+
+/* Button Styles */
+
+.control-button {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
 .button-container {
     display: flex;
     justify-content: center;
     gap: 5%;
     width: 100%;
-}
-
-strong {
-    font-size: large;
 }
 
 button {
@@ -140,6 +133,21 @@ button:hover {
 
 button.active {
     filter: brightness(0.7);
+}
+
+
+/* Other Styles */
+
+strong {
+    font-size: large;
+}
+
+video {
+    pointer-events: none;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: auto;
 }
 
 
