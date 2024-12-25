@@ -11,16 +11,20 @@ evenButtons.forEach((button) => {
         // Find the closest container
         const container = event.target.closest('.container');
         
-        // Update the <p> tag within this container
         const paragraph = container.querySelector('p');
-        const video = container.querySelector('video'); // Video in the same container
+        const video = container.querySelector('video');
+        const smallTag = container.querySelector('small');
 
         if (container.id === 'square-square') {
             paragraph.textContent = "Nothing!";
             video.src = "../videos/squares/square-square-even.mp4";
+            if (smallTag) smallTag.style.display = "none";
         } else if (container.id === 'shield-square') {
             paragraph.textContent = "Fist/Fist → Kite/Kite";
             video.src = "../videos/squares/shield-square-even.mp4";
+        } else if (container.id === 'muffin-square') {
+            paragraph.textContent = "Fist/Fist → Kite/Kite";
+            video.src = "../videos/squares/muffin-square-even.mp4";
         }
 
         video.load();
@@ -33,17 +37,21 @@ oddButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
         // Find the closest container
         const container = event.target.closest('.container');
-       
-        // Update the <p> tag within this container
+
         const paragraph = container.querySelector('p');
-        const video = container.querySelector('video'); // Video in the same container
+        const video = container.querySelector('video'); 
+        const smallTag = container.querySelector('small');
 
         if (container.id === 'square-square') {
-            paragraph.textContent = "Kite/Kite → Fist/Fist → Pawn/Pawn → Slice on the open layer → Fist/Fist → Kite/Kite";
+            paragraph.textContent = "Kite/Kite → Fist/Fist → Pawn/Pawn → Fist/Fist → Kite/Kite";
             video.src = "../videos/squares/square-square-odd.mp4";
+            if (smallTag) smallTag.style.display = "block";
         } else if (container.id === 'shield-square') {
             paragraph.textContent = "L/3-1-2 → 3-2-1/L → Square/Shield → Fist/Fist → Kite/Kite";
             video.src = "../videos/squares/shield-square-odd.mp4";
+        } else if (container.id === 'muffin-square') {
+            paragraph.textContent = "Fist/Fist → Pawn/Pawn → Fist/Fist → Kite/Kite";
+            video.src = "../videos/squares/muffin-square-odd.mp4";
         }
 
         video.load();
