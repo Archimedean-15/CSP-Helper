@@ -5,31 +5,26 @@ const playButtons = document.querySelectorAll('.play-button');
 const pauseButtons = document.querySelectorAll('.pause-button');
 
 
-// Ensure controls are disabled
-// squareSquareVid.controls = false;
-
-
-
 // Update video source and <p> tag text content when even buttons are clicked
 evenButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
         // Find the closest container
         const container = event.target.closest('.container');
-        if (container) {
-            // Update the <p> tag within this container
-            const paragraph = container.querySelector('p');
-            const video = container.querySelector('video'); // Video in the same container
+        
+        // Update the <p> tag within this container
+        const paragraph = container.querySelector('p');
+        const video = container.querySelector('video'); // Video in the same container
 
-            if (container.id === 'square-square') {
-                paragraph.textContent = "Nothing!";
-                video.src = "../videos/squares/square-square-even.mp4";
-            } else if (container.id === 'shield-square') {
-                paragraph.textContent = "Fist/Fist → Kite/Kite";
-                video.src = "../videos/squares/shield-square-even.mp4";
-            }
-
-            video.load(); // Reload the video
+        if (container.id === 'square-square') {
+            paragraph.textContent = "Nothing!";
+            video.src = "../videos/squares/square-square-even.mp4";
+        } else if (container.id === 'shield-square') {
+            paragraph.textContent = "Fist/Fist → Kite/Kite";
+            video.src = "../videos/squares/shield-square-even.mp4";
         }
+
+        video.load();
+        resetButtonStates(container.querySelectorAll('.control-button'));
     });
 });
 
@@ -38,21 +33,21 @@ oddButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
         // Find the closest container
         const container = event.target.closest('.container');
-        if (container) {
-            // Update the <p> tag within this container
-            const paragraph = container.querySelector('p');
-            const video = container.querySelector('video'); // Video in the same container
+       
+        // Update the <p> tag within this container
+        const paragraph = container.querySelector('p');
+        const video = container.querySelector('video'); // Video in the same container
 
-            if (container.id === 'square-square') {
-                paragraph.textContent = "Kite/Kite → Fist/Fist → Pawn/Pawn → Slice on the open layer → Fist/Fist → Kite/Kite";
-                video.src = "../videos/squares/square-square-odd.mp4";
-            } else if (container.id === 'shield-square') {
-                paragraph.textContent = "L/3-1-2 → 3-2-1/L → Square/Shield → Fist/Fist → Kite/Kite";
-                video.src = "../videos/squares/shield-square-odd.mp4";
-            }
-
-            video.load(); // Reload the video
+        if (container.id === 'square-square') {
+            paragraph.textContent = "Kite/Kite → Fist/Fist → Pawn/Pawn → Slice on the open layer → Fist/Fist → Kite/Kite";
+            video.src = "../videos/squares/square-square-odd.mp4";
+        } else if (container.id === 'shield-square') {
+            paragraph.textContent = "L/3-1-2 → 3-2-1/L → Square/Shield → Fist/Fist → Kite/Kite";
+            video.src = "../videos/squares/shield-square-odd.mp4";
         }
+
+        video.load();
+        resetButtonStates(container.querySelectorAll('.control-button'));
     });
 });
 
