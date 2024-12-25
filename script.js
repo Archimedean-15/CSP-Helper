@@ -14,17 +14,21 @@ evenButtons.forEach((button) => {
         const paragraph = container.querySelector('p');
         const video = container.querySelector('video');
         const smallTag = container.querySelector('small');
+        const noteText = container.querySelector('em');
 
         if (container.id === 'square-square') {
             paragraph.textContent = "Nothing!";
             video.src = "../videos/squares/square-square-even.mp4";
-            if (smallTag) smallTag.style.display = "none";
+            smallTag.style.display = "none";
         } else if (container.id === 'shield-square') {
             paragraph.textContent = "Fist/Fist → Kite/Kite";
             video.src = "../videos/squares/shield-square-even.mp4";
         } else if (container.id === 'muffin-square') {
             paragraph.textContent = "Fist/Fist → Kite/Kite";
             video.src = "../videos/squares/muffin-square-even.mp4";
+        } else if (container.id === 'scallop-square') {
+            video.src = "../videos/squares/muffin-square-even.mp4";
+            noteText.textContent = "Note: Hold the edges on the right. Also, be sure to solve Scallop/Kite into the front";
         }
 
         video.load();
@@ -41,17 +45,21 @@ oddButtons.forEach((button) => {
         const paragraph = container.querySelector('p');
         const video = container.querySelector('video'); 
         const smallTag = container.querySelector('small');
+        const noteText = container.querySelector('em');
 
         if (container.id === 'square-square') {
             paragraph.textContent = "Kite/Kite → Fist/Fist → Pawn/Pawn → Fist/Fist → Kite/Kite";
             video.src = "../videos/squares/square-square-odd.mp4";
-            if (smallTag) smallTag.style.display = "block";
+            smallTag.style.display = "block";
         } else if (container.id === 'shield-square') {
             paragraph.textContent = "L/3-1-2 → 3-2-1/L → Square/Shield → Fist/Fist → Kite/Kite";
             video.src = "../videos/squares/shield-square-odd.mp4";
         } else if (container.id === 'muffin-square') {
             paragraph.textContent = "Fist/Fist → Pawn/Pawn → Fist/Fist → Kite/Kite";
             video.src = "../videos/squares/muffin-square-odd.mp4";
+        } else if (container.id === 'scallop-square') {
+            video.src = "../videos/squares/muffin-square-odd.mp4";
+            noteText.textContent = "Note: Hold the edges on the right. Also, be sure to solve Scallop/Kite into the back";
         }
 
         video.load();
