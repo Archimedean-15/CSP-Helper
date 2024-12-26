@@ -29,14 +29,27 @@ evenButtons.forEach((button) => {
         } else if (container.id === 'scallop-square') {
             video.src = "../videos/squares/muffin-square-even.mp4";
             noteText.textContent = "Note: Hold the edges on the right. Also, be sure to solve Scallop/Kite into the front";
+        } else if (container.id === 'pawn-square') {
+            video.src = "../videos/squares/pawn-square-even.mp4";
+            noteText.textContent = "Note: Be sure to solve Scallop/Kite into the front";
+        } else if (container.id === 'barrel-square') {
+            paragraph.textContent = "Pawn/Pawn → Star/4-4 → Scallop/Scallop → Barrel/Barrel → Kite/Kite";
+            video.src = "../videos/squares/barrel-square-even.mp4";
+        } else if (container.id === 'fist-square') {
+            video.src = "../videos/squares/fist-square-even.mp4";
+            noteText.textContent = "Note: Solve 4-1-1/L such that Scallop/Kite ends up in the front";
+        } else if (container.id === 'kite-square') {
+            paragraph.textContent = "Fist/Fist → Shield/Kite → L/3-1-2 → Shield/Square → Fist/Fist → Kite/Kite"
+            video.src = "../videos/squares/kite-square-even.mp4";
+            noteText.textContent = "Note: Start with the kite facing left";
         }
+        
 
         video.load();
         resetButtonStates(container.querySelectorAll('.control-button'));
     });
 });
 
-// Update video source and <p> tag text content when odd buttons are clicked
 oddButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
         // Find the closest container
@@ -60,6 +73,19 @@ oddButtons.forEach((button) => {
         } else if (container.id === 'scallop-square') {
             video.src = "../videos/squares/muffin-square-odd.mp4";
             noteText.textContent = "Note: Hold the edges on the right. Also, be sure to solve Scallop/Kite into the back";
+        } else if (container.id === 'pawn-square') {
+            video.src = "../videos/squares/pawn-square-odd.mp4";
+            noteText.textContent = "Note: Be sure to solve Scallop/Kite into the back";
+        } else if (container.id === 'barrel-square') {
+            paragraph.textContent = "Pawn/Pawn → Star/4-4 → Shield/Shield → Barrel/Barrel → Kite/Kite";
+            video.src = "../videos/squares/barrel-square-odd.mp4";
+        } else if (container.id === 'fist-square') {
+            video.src = "../videos/squares/fist-square-odd.mp4";
+            noteText.textContent = "Note: Solve 4-1-1/L such that Scallop/Kite ends up in the back";
+        } else if (container.id === 'kite-square') {
+            paragraph.textContent = "Fist/Fist → Shield/Kite → 3-1-2/L → Shield/Square → Fist/Fist → Kite/Kite"
+            video.src = "../videos/squares/kite-square-odd.mp4";
+            noteText.textContent = "Note: Start with the kite facing right";
         }
 
         video.load();
