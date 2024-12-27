@@ -10,7 +10,7 @@ evenButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
         // Find the closest container
         const container = event.target.closest('.container');
-        
+
         const paragraph = container.querySelector('p');
         const video = container.querySelector('video');
         const smallTag = container.querySelector('small');
@@ -26,8 +26,9 @@ evenButtons.forEach((button) => {
         } else if (container.id === 'muffin-square') {
             paragraph.textContent = "Fist/Fist → Kite/Kite";
             video.src = "../videos/squares/muffin-square-even.mp4";
+            smallTag.style.display = "none";
         } else if (container.id === 'scallop-square') {
-            video.src = "../videos/squares/muffin-square-even.mp4";
+            video.src = "../videos/squares/scallop-square-even.mp4";
             noteText.textContent = "Note: Hold the edges on the right. Also, be sure to solve Scallop/Kite into the front";
         } else if (container.id === 'pawn-square') {
             video.src = "../videos/squares/pawn-square-even.mp4";
@@ -43,7 +44,7 @@ evenButtons.forEach((button) => {
             video.src = "../videos/squares/kite-square-even.mp4";
             noteText.textContent = "Note: Start with the kite facing left";
         }
-        
+
 
         video.load();
         resetButtonStates(container.querySelectorAll('.control-button'));
@@ -56,7 +57,7 @@ oddButtons.forEach((button) => {
         const container = event.target.closest('.container');
 
         const paragraph = container.querySelector('p');
-        const video = container.querySelector('video'); 
+        const video = container.querySelector('video');
         const smallTag = container.querySelector('small');
         const noteText = container.querySelector('em');
 
@@ -70,8 +71,9 @@ oddButtons.forEach((button) => {
         } else if (container.id === 'muffin-square') {
             paragraph.textContent = "Fist/Fist → Pawn/Pawn → Fist/Fist → Kite/Kite";
             video.src = "../videos/squares/muffin-square-odd.mp4";
+            smallTag.style.display = "block";
         } else if (container.id === 'scallop-square') {
-            video.src = "../videos/squares/muffin-square-odd.mp4";
+            video.src = "../videos/squares/scallop-square-odd.mp4";
             noteText.textContent = "Note: Hold the edges on the right. Also, be sure to solve Scallop/Kite into the back";
         } else if (container.id === 'pawn-square') {
             video.src = "../videos/squares/pawn-square-odd.mp4";
@@ -97,7 +99,7 @@ playButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
         const container = event.target.closest('.container');
         const video = container.querySelector('video'); // Video in the same container
-        video.play(); 
+        video.play();
 
         const playButton = container.querySelector('.play-button');
         const pauseButton = container.querySelector('.pause-button');
