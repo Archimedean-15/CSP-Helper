@@ -6,11 +6,13 @@ const pauseButtons = document.querySelectorAll('.pause-button');
 
 
 // Update video source and <p> tag text content when even buttons are clicked
-evenButtons.forEach((button) => {
-    button.addEventListener('click', (event) => {
+evenButtons.forEach((evenButton) => {
+    evenButton.addEventListener('click', (event) => {
+
         // Find the closest container
         const container = event.target.closest('.container');
 
+        const oddButton = container.querySelector('.odd-button');
         const paragraph = container.querySelector('p');
         const video = container.querySelector('video');
         const smallTag = container.querySelector('small');
@@ -45,17 +47,22 @@ evenButtons.forEach((button) => {
             noteText.textContent = "Note: Start with the kite facing left";
         }
 
+        // Make button darker
+        evenButton.classList.add("active");
+        oddButton.classList.remove("active");
 
         video.load();
         resetButtonStates(container.querySelectorAll('.control-button'));
     });
 });
 
-oddButtons.forEach((button) => {
-    button.addEventListener('click', (event) => {
+oddButtons.forEach((oddButton) => {
+    oddButton.addEventListener('click', (event) => {
+
         // Find the closest container
         const container = event.target.closest('.container');
 
+        const evenButton = container.querySelector('.even-button');
         const paragraph = container.querySelector('p');
         const video = container.querySelector('video');
         const smallTag = container.querySelector('small');
@@ -89,6 +96,10 @@ oddButtons.forEach((button) => {
             video.src = "../videos/squares/kite-square-odd.mp4";
             noteText.textContent = "Note: Start with the kite facing right";
         }
+
+        // Make button darker
+        oddButton.classList.add("active");
+        evenButton.classList.remove("active");
 
         video.load();
         resetButtonStates(container.querySelectorAll('.control-button'));
