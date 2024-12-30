@@ -18,21 +18,25 @@ function changeToNormal(container, paragraph, video, smallTag, noteText) {
         video.src = "../videos/squares/muffin-square-even.mp4";
         smallTag.style.display = "none";
     } else if (container.id === 'scallop-square') {
+        paragraph.textContent = "L/4-1-1 → Scallop/Kite → Fist/Fist → Kite/Kite";
         video.src = "../videos/squares/scallop-square-even.mp4";
         noteText.textContent = "Note: Hold the edges on the right. Also, be sure to solve Scallop/Kite into the front";
     } else if (container.id === 'pawn-square') {
+        paragraph.textContent = "L/4-1-1 → Scallop/Kite → Fist/Fist → Kite/Kite";
         video.src = "../videos/squares/pawn-square-even.mp4";
-        noteText.textContent = "Note: Be sure to solve Scallop/Kite into the front";
+        noteText.textContent = "Note: Hold edges on the left, and be sure to solve Scallop/Kite into the front";
     } else if (container.id === 'barrel-square') {
         paragraph.textContent = "Pawn/Pawn → Star/4-4 → Scallop/Scallop → Barrel/Barrel → Kite/Kite";
         video.src = "../videos/squares/barrel-square-even.mp4";
+        noteText.textContent = "Note: You must start with the 2 left corners in the front and the 2 right corners in the back";
     } else if (container.id === 'fist-square') {
+        paragraph.textContent = "Pawn/Kite → 4-1-1/L → Scallop/Kite → Fist/Fist → Kite/Kite";
         video.src = "../videos/squares/fist-square-even.mp4";
         noteText.textContent = "Note: Solve 4-1-1/L such that Scallop/Kite ends up in the front";
     } else if (container.id === 'kite-square') {
         paragraph.textContent = "Fist/Fist → Shield/Kite → L/3-1-2 → Shield/Square → Fist/Fist → Kite/Kite"
         video.src = "../videos/squares/kite-square-even.mp4";
-        noteText.textContent = "Note: Start with the kite facing left";
+        noteText.textContent = "Note: Start with the kite facing left, and make sure the shield in Shield/Kite gets solved on the right";
     }
 }
 
@@ -49,21 +53,25 @@ function changeToMirror(container, paragraph, video, smallTag, noteText) {
         video.src = "../videos/squares/square-muffin-even.mp4";
         smallTag.style.display = "none";
     } else if (container.id === 'scallop-square') {
+        paragraph.textContent = "L/4-1-1 → Kite/Scallop → Fist/Fist → Kite/Kite";
         video.src = "../videos/squares/square-scallop-even.mp4";
-        noteText.textContent = "Note: Hold the edges on the right. Also, be sure to solve Scallop/Kite into the front";
+        noteText.textContent = "Note: Hold the edges on the left. Also, be sure to solve Kite/Scallop into the front";
     } else if (container.id === 'pawn-square') {
+        paragraph.textContent = "4-1-1/L → Kite/Scallop → Fist/Fist → Kite/Kite";
         video.src = "../videos/squares/square-pawn-even.mp4";
-        noteText.textContent = "Note: Be sure to solve Scallop/Kite into the front";
+        noteText.textContent = "Note: Hold edges on the right, and be sure to solve Kite/Scallop into the front";
     } else if (container.id === 'barrel-square') {
-        paragraph.textContent = "Pawn/Pawn → Star/4-4 → Scallop/Scallop → Barrel/Barrel → Kite/Kite";
+        paragraph.textContent = "Pawn/Pawn → 4-4/Star → Scallop/Scallop → Barrel/Barrel → Kite/Kite";
         video.src = "../videos/squares/square-barrel-even.mp4";
+        noteText.textContent = "Note: You must start with the 2 left corners in the back and the 2 right corners in the front";
     } else if (container.id === 'fist-square') {
+        paragraph.textContent = "Pawn/Kite → L/4-1-1 → Scallop/Kite → Fist/Fist → Kite/Kite"
         video.src = "../videos/squares/square-fist-even.mp4";
-        noteText.textContent = "Note: Solve 4-1-1/L such that Scallop/Kite ends up in the front";
+        noteText.textContent = "Note: Solve L/4-1-1 such that Scallop/Kite ends up in the back";
     } else if (container.id === 'kite-square') {
-        paragraph.textContent = "Fist/Fist → Shield/Kite → L/3-1-2 → Shield/Square → Fist/Fist → Kite/Kite"
+        paragraph.textContent = "Fist/Fist → Kite/Shield → 3-1-2/L → Square/Shield → Fist/Fist → Kite/Kite"
         video.src = "../videos/squares/square-kite-even.mp4";
-        noteText.textContent = "Note: Start with the kite facing left";
+        noteText.textContent = "Note: Start with the kite facing right, and make sure the shield in Shield/Kite gets solved on the right";
     }
 }
 
@@ -86,15 +94,14 @@ tabButtons.forEach((tab) => {
 
             if (tab.id === 'normal') {
                 changeToNormal(container, paragraph, video, smallTag, noteText);
-                console.log("changed to normal");
             }
             else if (tab.id === 'mirror') {
                 changeToMirror(container, paragraph, video, smallTag, noteText);
-                console.log("changed to mirror");
             }
 
             evenButton.classList.add('active');
             oddButton.classList.remove('active');
+            resetButtonStates(container.querySelectorAll('.control-button'));
         }
     });
 });
@@ -119,8 +126,6 @@ evenButtons.forEach((evenButton) => {
         else if (activeTab.id === 'mirror') {
             changeToMirror(container, paragraph, video, smallTag, noteText);
         }
-
-
 
         // Make button darker
         evenButton.classList.add("active");
@@ -158,10 +163,10 @@ oddButtons.forEach((oddButton) => {
                 smallTag.style.display = "block";
             } else if (container.id === 'scallop-square') {
                 video.src = "../videos/squares/scallop-square-odd.mp4";
-                noteText.textContent = "Note: Hold the edges on the right. Also, be sure to solve Scallop/Kite into the back";
+                noteText.textContent = "Note: Hold the edges on the left. Also, be sure to solve Scallop/Kite into the back";
             } else if (container.id === 'pawn-square') {
                 video.src = "../videos/squares/pawn-square-odd.mp4";
-                noteText.textContent = "Note: Be sure to solve Scallop/Kite into the back";
+                noteText.textContent = "Note: Hold edges on the left, and be sure to solve Scallop/Kite into the back";
             } else if (container.id === 'barrel-square') {
                 paragraph.textContent = "Pawn/Pawn → Star/4-4 → Shield/Shield → Barrel/Barrel → Kite/Kite";
                 video.src = "../videos/squares/barrel-square-odd.mp4";
@@ -169,9 +174,9 @@ oddButtons.forEach((oddButton) => {
                 video.src = "../videos/squares/fist-square-odd.mp4";
                 noteText.textContent = "Note: Solve 4-1-1/L such that Scallop/Kite ends up in the back";
             } else if (container.id === 'kite-square') {
-                paragraph.textContent = "Fist/Fist → Shield/Kite → 3-1-2/L → Shield/Square → Fist/Fist → Kite/Kite"
+                paragraph.textContent = "Fist/Fist → Shield/Kite → L/3-2-1 → Shield/Square → Fist/Fist → Kite/Kite"
                 video.src = "../videos/squares/kite-square-odd.mp4";
-                noteText.textContent = "Note: Start with the kite facing right";
+                noteText.textContent = "Note: Start with the kite facing right, and make sure the shield in Shield/Kite gets solved on the right";
             }
         }
         else if (activeTab.id === 'mirror') {
@@ -188,20 +193,20 @@ oddButtons.forEach((oddButton) => {
                 smallTag.style.display = "block";
             } else if (container.id === 'scallop-square') {
                 video.src = "../videos/squares/square-scallop-odd.mp4";
-                noteText.textContent = "Note: Hold the edges on the right. Also, be sure to solve Scallop/Kite into the back";
+                noteText.textContent = "Note: Hold the edges on the left. Also, be sure to solve Kite/Scallop into the back";
             } else if (container.id === 'pawn-square') {
                 video.src = "../videos/squares/square-pawn-odd.mp4";
-                noteText.textContent = "Note: Be sure to solve Scallop/Kite into the back";
+                noteText.textContent = "Note: Hold edges on the right, and be sure to solve Kite/Scallop into the back";
             } else if (container.id === 'barrel-square') {
-                paragraph.textContent = "Pawn/Pawn → Star/4-4 → Shield/Shield → Barrel/Barrel → Kite/Kite";
+                paragraph.textContent = "Pawn/Pawn → 4-4/Star → Shield/Shield → Barrel/Barrel → Kite/Kite";
                 video.src = "../videos/squares/square-barrel-odd.mp4";
             } else if (container.id === 'fist-square') {
                 video.src = "../videos/squares/square-fist-odd.mp4";
-                noteText.textContent = "Note: Solve 4-1-1/L such that Scallop/Kite ends up in the back";
+                noteText.textContent = "Note: Solve L/4-1-1 such that Scallop/Kite ends up in the front";
             } else if (container.id === 'kite-square') {
-                paragraph.textContent = "Fist/Fist → Shield/Kite → 3-1-2/L → Shield/Square → Fist/Fist → Kite/Kite"
+                paragraph.textContent = "Fist/Fist → Kite/Shield → 3-2-1/L → Square/Shield → Fist/Fist → Kite/Kite"
                 video.src = "../videos/squares/square-kite-odd.mp4";
-                noteText.textContent = "Note: Start with the kite facing right";
+                noteText.textContent = "Note: Start with the kite facing left, and make sure the shield in Shield/Kite gets solved on the right";
             }
         }
 
