@@ -3,7 +3,20 @@ const evenButtons = document.querySelectorAll('.even-button');
 const oddButtons = document.querySelectorAll('.odd-button');
 const playButtons = document.querySelectorAll('.play-button');
 const pauseButtons = document.querySelectorAll('.pause-button');
+const tabButtons = document.querySelectorAll('.tab-button');
 
+
+tabButtons.forEach((button) => {
+    button.addEventListener('click', event => {
+        const container = event.target.closest('.container');
+        const activeButton = container.querySelector('.active-tab');
+
+        if (activeButton !== button) {
+            activeButton.classList.remove('active-tab');
+            button.classList.add('active-tab');
+        }
+    });
+});
 
 // Update video source and <p> tag text content when even buttons are clicked
 evenButtons.forEach((evenButton) => {
