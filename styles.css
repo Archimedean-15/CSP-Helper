@@ -66,7 +66,7 @@ main {
     align-items: center;
     width: 40vw;
     min-width: 500px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     background-color: #1c1c1c;
@@ -147,15 +147,19 @@ button.active {
 .mirror-button-container {
     top: 0;
     left: 0;
+    padding-bottom: 15px;
     gap: 0px;
     position: absolute;
+    border-radius: 6px;
+    background-color: hsl(0, 5%, 12%);
+    box-shadow: 0px 5px 5px -3px black;
 }
 
 .mirror-button-container button {
     flex: 1;
     background-color: transparent;
     transition: background-color 0.3s, color 0.3s;
-    color: hsl(0, 0%, 61%);
+    color: hsl(0, 0%, 65%);
     font-size: 1.05rem;
 }
 
@@ -163,18 +167,18 @@ button.active {
     background-color: hsl(0, 0%, 15%);
 }
 
-.mirror-button-container button#left {
-    border-top-left-radius: 8px;
+.mirror-button-container button#normal {
+    border-top-left-radius: 6px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 0px;
-    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
-.mirror-button-container button#right {
+.mirror-button-container button#mirror {
     border-top-left-radius: 0px;
-    border-top-right-radius: 8px;
+    border-top-right-radius: 6px;
     border-bottom-left-radius: 8px;
-    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .mirror-button-container button:not(.active-tab) {
@@ -210,5 +214,5 @@ em {
 
 .video-controls-container,
 .description-button-container {
-    margin-top: 8%;
+    margin-top: 10%;
 }
