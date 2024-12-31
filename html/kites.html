@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSP Helper - Kites</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://kit.fontawesome.com/5caa3318bf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="squares.html">Squares</a></li>
+            <li class="active"><a href="#">Kites</a></li>
+            <li><a href="barrels.html">Barrels</a></li>
+            <li><a href="scallops.html">Scallops</a></li>
+            <li><a href="shields.html">Shields</a></li>
+            <li><a href="muffins.html">Muffins</a></li>
+            <li><a href="fists.html">Fists</a></li>
+            <li><a href="pawns.html">Pawns</a></li>
+            <li><a href="pairs.html">Pairs</a></li>
+            <li><a href="ls.html">Ls</a></li>
+            <li><a href="lines.html">Lines</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container-grid">
+            <div class="container" id="kite-kite">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Kite/Kite</strong>
+                    <p>Slice</p>
+
+                    <small>
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: At Pawn/Pawn, be sure to slice when all of the edges are on 1 side</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="odd-button active">Odd</button>
+                        <button type="button" class="even-button">Even</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/kites/kite-kite-odd.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="scallop-kite">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Scallop/Kite</strong>
+                    <p>Fist/Fist → Kite/Kite</p>
+
+                    <small>
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: At 4-1-1/L, move both layers to change which face you solve Scallop/Kite in</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="odd-button active">Odd</button>
+                        <button type="button" class="even-button">Even</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/kites/scallop-kite-odd.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="shield-kite">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Shield/Kite</strong>
+                    <p>L/3-2-1 → Shield/Square → Fist/Fist → Kite/Kite</p>
+
+                    <small style="display: block;">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: Hold shield on the right and have the kite point away from you</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="odd-button active">Odd</button>
+                        <button type="button" class="even-button">Even</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/kites/shield-kite-odd.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="pawn-kite">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Pawn/Kite</strong>
+                    <p>4-1-1/L → Scallop/Kite → Fist/Fist → Kite/Kite</p>
+
+                    <small style="display: block;">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: Solve 4-1-1/L by turning both layers</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="odd-button active">Odd</button>
+                        <button type="button" class="even-button">Even</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/kites/pawn-kite-odd.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="muffin-kite">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Muffin/Kite</strong>
+                    <p>Shield/Barrel → Pair/4-2 → Shield/Shield → Barrel/Barrel → Kite/Kite</p>
+
+                    <small style="display: block;">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: Honestly, there are so many ways to change the parity, just solve it like the
+                            video</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="odd-button active">Odd</button>
+                        <button type="button" class="even-button">Even</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/kites/muffin-kite-odd.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="barrel-kite" style="background-color: rgba(255, 0, 0, 0.3);">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Barrel/Kite</strong>
+                    <p>Fist/Fist → Pawn/Pawn → Fist/Fist → Kite/Kite</p>
+
+                    <small style="display: block;">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: At Pawn/Pawn, be sure to slice when all of the edges are on 1 side</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="odd-button active">Odd</button>
+                        <button type="button" class="even-button">Even</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/kites/barrel-kite-odd.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="fist-kite" style="background-color: rgba(255, 0, 0, 0.3);">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Fist/Kite</strong>
+                    <p>Square/Pawn → L/4-1-1 → Scallop/Kite → Fist/Fist → Kite/Kite</p>
+
+                    <small style="display: block;">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: At L/4-1-1, move both layers to change which face you solve Scallop/Kite in</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="odd-button active">Odd</button>
+                        <button type="button" class="even-button">Even</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/kites/fist-kite-odd.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/kites.js"></script>
+</body>
+
+</html>
