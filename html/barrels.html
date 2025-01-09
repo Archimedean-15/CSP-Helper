@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSP Helper - Kites</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://kit.fontawesome.com/5caa3318bf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="squares.html">Squares</a></li>
+            <li><a href="kites.html">Kites</a></li>
+            <li class="active"><a href="#">Barrels</a></li>
+            <li><a href="scallops.html">Scallops</a></li>
+            <li><a href="shields.html">Shields</a></li>
+            <li><a href="muffins.html">Muffins</a></li>
+            <li><a href="fists.html">Fists</a></li>
+            <li><a href="pawns.html">Pawns</a></li>
+            <li><a href="pairs.html">Pairs</a></li>
+            <li><a href="ls.html">Ls</a></li>
+            <li><a href="lines.html">Lines</a></li>
+            <li><a href="html/stars.html">Stars</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container-grid">
+            <div class="container" id="barrel-barrel">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Barrel/Barrel</strong>
+                    <p>Kite/Kite</p>
+
+                    <small>
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: At Scallop/Scallop, be sure to slice when all of the edges are on 1 side</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="odd-button active">Odd</button>
+                        <button type="button" class="even-button">Even</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/barrels/barrel-barrel-odd.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="scallop-barrel">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Scallop/Barrel</strong>
+                    <p>4-2/Pair → Scallop/Scallop → Barrel/Barrel → Kite/Kite</p>
+
+                    <div class="button-container">
+                        <button type="button" class="odd-button active">Odd</button>
+                        <button type="button" class="even-button">Even</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/barrels/scallop-barrel-odd.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="shield-barrel">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Shield/Barrel</strong>
+                    <p>Pair/2-2-2 → Shield/Shield → Barrel/Barrel → Kite/Kite</p>
+
+                    <small style="display: block;">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: Hold shield on the right, and solve Pair/2-2-2 such that Shield/Shield ends up in the front</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="odd-button active">Odd</button>
+                        <button type="button" class="even-button">Even</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/barrels/shield-barrel-odd.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+                
+        </div>
+    </main>
+    <script src="../js/barrels.js"></script>
+</body>
+
+</html>
