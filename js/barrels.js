@@ -17,6 +17,10 @@ function changeToNormal(container, paragraph, video, smallTag, noteText) {
         paragraph.textContent = "Pair/2-2-2 → Shield/Shield → Barrel/Barrel → Kite/Kite";
         video.src = "../videos/kites/shield-barrel-odd.mp4";
         noteText.textContent = "Note: Hold shield on the right, and solve Pair/2-2-2 such that Shield/Shield ends up in the front"
+    } else if (container.id === 'muffin-barrel') {
+        paragraph.textContent = "Shield/Kite → L/3-1-2 → Shield/Square → Fist/Fist → Kite/Kite";
+        video.src = "../videos/kites/muffin-barrel-odd.mp4";
+        noteText.textContent = "Note: Hold muffin in the front and slice away the line from muffin to go into Shield/Kite. Also, solve Shield/Kite with the kite facing you";
     } else if (container.id === 'pawn-barrel') {
         paragraph.textContent = "5-1/Pair → Scallop/Kite → Fist/Fist → Kite/Kite";
         video.src = "../videos/kites/pawn-barrel-odd.mp4";
@@ -36,10 +40,14 @@ function changeToMirror(container, paragraph, video, smallTag, noteText) {
         paragraph.textContent = "Pair/2-2-2 → Shield/Shield → Barrel/Barrel → Kite/Kite";
         video.src = "../videos/kites/barrel-shield-odd.mp4";
         noteText.textContent = "Note: Hold shield on the left, and solve Pair/2-2-2 such that Shield/Shield ends up in the front"
+    }  else if (container.id === 'muffin-barrel') {
+        paragraph.textContent = "Kite/Shield → 3-1-2/L → Square/Shield → Fist/Fist → Kite/Kite";
+        video.src = "../videos/kites/barrel-muffin-odd.mp4";
+        noteText.textContent = "Note: Hold muffin in the back and slice away the line from muffin to go into Kite/Shield. Also, solve Kite/Shield with the kite facing you";
     } else if (container.id === 'pawn-barrel') {
         paragraph.textContent = "Pair/5-1 → Kite/Scallop → Fist/Fist → Kite/Kite";
         video.src = "../videos/kites/barrel-pawn-odd.mp4";
-    }
+    } 
 }
 
 
@@ -146,7 +154,7 @@ evenButtons.forEach((evenButton) => {
                 video.src = "../videos/kites/barrel-shield-even.mp4";
                 noteText.textContent = "Note: Hold shield on the left, and solve Pair/2-2-2 such that Shield/Shield ends up in the back"
             } else if (container.id === 'pawn-barrel') {
-                paragraph.textContent = "Pair/3-3 → Line/4-2 → Kite/Scallop → Fist/Fist → Kite/Kite";
+                paragraph.textContent = "Pair/3-3 → Line/4-2 → Scallop/Kite → Fist/Fist → Kite/Kite";
                 video.src = "../videos/kites/barrel-pawn-even.mp4";
             }
         }
