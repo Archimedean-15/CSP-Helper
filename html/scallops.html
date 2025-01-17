@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSP Helper - Scallops</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://kit.fontawesome.com/5caa3318bf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="squares.html">Squares</a></li>
+            <li><a href="kites.html">Kites</a></li>
+            <li><a href="barrels.html">Barrels</a></li>
+            <li class="active"><a href="#">Scallops</a></li>
+            <li><a href="shields.html">Shields</a></li>
+            <li><a href="muffins.html">Muffins</a></li>
+            <li><a href="fists.html">Fists</a></li>
+            <li><a href="pawns.html">Pawns</a></li>
+            <li><a href="pairs.html">Pairs</a></li>
+            <li><a href="ls.html">Ls</a></li>
+            <li><a href="lines.html">Lines</a></li>
+            <li><a href="html/stars.html">Stars</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container-grid">
+            <div class="container" id="scallop-scallop">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Scallop/Scallop</strong>
+                    <p>Barrel/Barrel → Kite/Kite</p>
+
+                    <small>
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: When starting, be sure to slice when all of the edges are on 1 side</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="odd-button active">Odd</button>
+                        <button type="button" class="even-button">Even</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/scallops/scallop-scallop-odd.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="shield-scallop">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Shield/Scallop</strong>
+                    <p>4-2/Pair → Scallop/Scallop → Kite/Kite</p>
+
+                    <small style="display: block;">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: Solve with scallop on the right, and solve such that Scallop/Scallop ends up in the front</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="odd-button active">Odd</button>
+                        <button type="button" class="even-button">Even</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/scallops/shield-scallop-odd.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </main>
+    <script src="../js/scallops.js"></script>
+</body>
+
+</html>
