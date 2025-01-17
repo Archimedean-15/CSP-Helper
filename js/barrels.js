@@ -24,6 +24,9 @@ function changeToNormal(container, paragraph, video, smallTag, noteText) {
     } else if (container.id === 'pawn-barrel') {
         paragraph.textContent = "5-1/Pair → Scallop/Kite → Fist/Fist → Kite/Kite";
         video.src = "../videos/kites/pawn-barrel-odd.mp4";
+    } else if (container.id === 'fist-barrel') {
+        paragraph.textContent = "Pawn/Muffin → 4-2/Pair → Scallop/Scallop → Barrel/Barrel → Kite/Kite";
+        video.src = "../videos/kites/fist-barrel-odd.mp4";
     }
 
 }
@@ -47,7 +50,10 @@ function changeToMirror(container, paragraph, video, smallTag, noteText) {
     } else if (container.id === 'pawn-barrel') {
         paragraph.textContent = "Pair/5-1 → Kite/Scallop → Fist/Fist → Kite/Kite";
         video.src = "../videos/kites/barrel-pawn-odd.mp4";
-    } 
+    } else if (container.id === 'fist-barrel') {
+        paragraph.textContent = "Muffin/Pawn → Pair/4-2 → Scallop/Scallop → Barrel/Barrel → Kite/Kite";
+        video.src = "../videos/kites/barrel-fist-odd.mp4";
+    }
 }
 
 
@@ -139,6 +145,9 @@ evenButtons.forEach((evenButton) => {
             } else if (container.id === 'pawn-barrel') {
                 paragraph.textContent = "3-3/Pair → 4-2/Line → Kite/Scallop → Fist/Fist → Kite/Kite";
                 video.src = "../videos/kites/pawn-barrel-even.mp4";
+            } else if (container.id === 'fist-barrel') {
+                paragraph.textContent = "Pawn/Muffin → 4-2/Pair → Shield/Shield → Barrel/Barrel → Kite/Kite";
+                video.src = "../videos/kites/fist-barrel-even.mp4";
             }
         }
         else if (activeTab.id === 'mirror') {
@@ -156,6 +165,9 @@ evenButtons.forEach((evenButton) => {
             } else if (container.id === 'pawn-barrel') {
                 paragraph.textContent = "Pair/3-3 → Line/4-2 → Scallop/Kite → Fist/Fist → Kite/Kite";
                 video.src = "../videos/kites/barrel-pawn-even.mp4";
+            } else if (container.id === 'fist-barrel') {
+                paragraph.textContent = "Muffin/Pawn → Pair/4-2 → Shield/Shield → Barrel/Barrel → Kite/Kite";
+                video.src = "../videos/kites/barrel-fist-even.mp4";
             }
         }
 
