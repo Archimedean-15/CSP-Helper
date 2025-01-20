@@ -7,22 +7,38 @@ const tabButtons = document.querySelectorAll('.tab-button');
 
 function changeToNormal(container, paragraph, video, smallTag, noteText) {
     if (container.id === 'scallop-scallop') {
-        video.src = "../videos/kites/scallop-scallop-odd.mp4";
+        video.src = "../videos/scallops/scallop-scallop-odd.mp4";
         smallTag.style.display = "none";
     } else if (container.id === 'shield-scallop') {
-        video.src = "../videos/kites/shield-scallop-odd.mp4";
-        noteText.textContent = "Note: Solve with scallop on the right, and solve such that Scallop/Scallop ends up in the front"
+        video.src = "../videos/scallops/shield-scallop-odd.mp4";
+        noteText.textContent = "Note: Solve with scallop on the right, and solve such that Scallop/Scallop ends up in the front";
+    } else if (container.id === 'muffin-scallop') {
+        paragraph.textContent = "5-1/Pair → Kite/Scallop → Fist/Fist → Kite/Kite";
+        video.src = "../videos/scallops/muffin-scallop-odd.mp4";
+        noteText.textContent = "Note: Solve with scallop on the left, and solve with the 3 edges on the muffin closest to you";
+    } else if (container.id === 'pawn-scallop') {
+        paragraph.textContent = "5-1/Pair → Scallop/Kite → Fist/Fist → Kite/Kite";
+        video.src = "../videos/scallops/pawn-scallop-odd.mp4";
+        noteText.textContent = "Note: Break apart the scallop and preserve the pawn to make the 5-1/Pair";
     }
 
 }
 
 function changeToMirror(container, paragraph, video, smallTag, noteText) {
     if (container.id === 'scallop-scallop') {
-        video.src = "../videos/kites/scallop-scallop-odd.mp4";
+        video.src = "../videos/scallops/scallop-scallop-odd.mp4";
         smallTag.style.display = "none";
     } else if (container.id === 'shield-scallop') {
-        video.src = "../videos/kites/scallop-shield-odd.mp4";
-        noteText.textContent = "Note: Solve with scallop on the right, and solve such that Scallop/Scallop ends up in the front"
+        video.src = "../videos/scallops/scallop-shield-odd.mp4";
+        noteText.textContent = "Note: Solve with scallop on the left, and solve such that Scallop/Scallop ends up in the front";
+    } else if (container.id === 'muffin-scallop') {
+        paragraph.textContent = "5-1/Pair → Scallop/Kite → Fist/Fist → Kite/Kite";
+        video.src = "../videos/scallops/scallop-muffin-odd.mp4";
+        noteText.textContent = "Note: Solve with scallop on the left, and solve with the 3 edges on the muffin farthest away from you";
+    } else if (container.id === 'pawn-scallop') {
+        paragraph.textContent = "Pair/5-1 → Kite/Scallop → Fist/Fist → Kite/Kite";
+        video.src = "../videos/scallops/scallop-pawn-odd.mp4";
+        noteText.textContent = "Note: Break apart the scallop and preserve the pawn to make the Pair/5-1";
     }
 }
 
@@ -73,7 +89,7 @@ oddButtons.forEach((oddButton) => {
 
         if (activeTab.id === 'normal') {
             changeToNormal(container, paragraph, video, smallTag, noteText);
-        } 
+        }
         else if (activeTab.id === 'mirror') {
             changeToMirror(container, paragraph, video, smallTag, noteText);
         }
@@ -104,12 +120,32 @@ evenButtons.forEach((evenButton) => {
             if (container.id === 'scallop-scallop') {
                 video.src = "../videos/scallops/scallop-scallop-even.mp4";
                 smallTag.style.display = "block";
+            } else if (container.id === 'shield-scallop') {
+                video.src = "../videos/scallops/shield-scallop-even.mp4";
+                noteText.textContent = "Note: Solve with scallop on the right, and solve such that Scallop/Scallop ends up in the back";
+            } else if (container.id === 'muffin-scallop') {
+                video.src = "../videos/scallops/muffin-scallop-even.mp4";
+                noteText.textContent = "Note: Solve with scallop on the left, and solve with the 3 edges on the muffin farthest away from you";
+            } else if (container.id === 'pawn-scallop') {
+                paragraph.textContent = "5-1/Pair → Kite/Scallop → Fist/Fist → Kite/Kite";
+                video.src = "../videos/scallops/pawn-scallop-even.mp4";
+                noteText.textContent = "Note: Break apart the scallop and preserve the pawn to make the 5-1/Pair";
             }
         }
         else if (activeTab.id === 'mirror') {
             if (container.id === 'scallop-scallop') {
                 video.src = "../videos/scallops/scallop-scallop-even.mp4";
                 smallTag.style.display = "block";
+            } else if (container.id === 'shield-scallop') {
+                video.src = "../videos/scallops/scallop-shield-even.mp4";
+                noteText.textContent = "Note: Solve with scallop on the left, and solve such that Scallop/Scallop ends up in the back";
+            } else if (container.id === 'muffin-scallop') {
+                video.src = "../videos/scallops/scallop-muffin-even.mp4";
+                noteText.textContent = "Note: Solve with scallop on the left, and solve with the 3 edges on the muffin closest to you";
+            } else if (container.id === 'pawn-scallop') {
+                paragraph.textContent = "5-1/Pair → Scallop/Kite → Fist/Fist → Kite/Kite";
+                video.src = "../videos/scallops/scallop-pawn-even.mp4";
+                noteText.textContent = "Note: Break apart the scallop and preserve the pawn to make the 5-1/Pair";
             }
         }
 
