@@ -20,6 +20,10 @@ function changeToNormal(container, paragraph, video, smallTag, noteText) {
         paragraph.textContent = "5-1/Pair → Scallop/Kite → Fist/Fist → Kite/Kite";
         video.src = "../videos/scallops/pawn-scallop-odd.mp4";
         noteText.textContent = "Note: Break apart the scallop and preserve the pawn to make the 5-1/Pair";
+    } else if (container.id === 'fist-scallop') {
+        paragraph.textContent = "Pair/5-1 → Kite/Scallop → Fist/Fist → Kite/Kite";
+        video.src = "../videos/scallops/fist-scallop-odd.mp4";
+        noteText.textContent = "Note: Make sure the pair touches the slice when solving into Pair/5-1";
     }
 
 }
@@ -39,6 +43,10 @@ function changeToMirror(container, paragraph, video, smallTag, noteText) {
         paragraph.textContent = "Pair/5-1 → Kite/Scallop → Fist/Fist → Kite/Kite";
         video.src = "../videos/scallops/scallop-pawn-odd.mp4";
         noteText.textContent = "Note: Break apart the scallop and preserve the pawn to make the Pair/5-1";
+    } else if (container.id === 'fist-scallop') {
+        paragraph.textContent = "5-1/Pair → Scallop/Kite → Fist/Fist → Kite/Kite";
+        video.src = "../videos/scallops/scallop-fist-odd.mp4";
+        noteText.textContent = "Note: Make sure the pair touches the slice when solving into 5-1/Pair";
     }
 }
 
@@ -130,6 +138,9 @@ evenButtons.forEach((evenButton) => {
                 paragraph.textContent = "5-1/Pair → Kite/Scallop → Fist/Fist → Kite/Kite";
                 video.src = "../videos/scallops/pawn-scallop-even.mp4";
                 noteText.textContent = "Note: Break apart the scallop and preserve the pawn to make the 5-1/Pair";
+            } else if (container.id === 'fist-scallop') {
+                video.src = "../videos/scallops/fist-scallop-even.mp4";
+                noteText.textContent = "Note: Make sure the pair doesn't touch the slice when solving into Pair/5-1";
             }
         }
         else if (activeTab.id === 'mirror') {
@@ -146,6 +157,9 @@ evenButtons.forEach((evenButton) => {
                 paragraph.textContent = "5-1/Pair → Scallop/Kite → Fist/Fist → Kite/Kite";
                 video.src = "../videos/scallops/scallop-pawn-even.mp4";
                 noteText.textContent = "Note: Break apart the scallop and preserve the pawn to make the 5-1/Pair";
+            } else if (container.id === 'fist-scallop') {
+                video.src = "../videos/scallops/scallop-fist-even.mp4";
+                noteText.textContent = "Note: Make sure the pair doesn't touch the slice when solving into 5-1/Pair";
             }
         }
 
