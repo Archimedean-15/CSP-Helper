@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSP Helper - Barrels</title>
+    <title>CSP Helper - Shields</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="https://kit.fontawesome.com/5caa3318bf.js" crossorigin="anonymous"></script>
 
@@ -16,9 +16,9 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="squares.html">Squares</a></li>
             <li><a href="kites.html">Kites</a></li>
-            <li class="active"><a href="#">Barrels</a></li>
+            <li><a href="barrels.html">Barrels</a></li>
             <li><a href="scallops.html">Scallops</a></li>
-            <li><a href="shields.html">Shields</a></li>
+            <li class="active"><a href="#">Shields</a></li>
             <li><a href="muffins.html">Muffins</a></li>
             <li><a href="pawns.html">Pawns</a></li>
             <li><a href="fists.html">Fists</a></li>
@@ -30,28 +30,28 @@
     </nav>
     <main>
         <div class="container-grid">
-            <div class="container" id="barrel-barrel">
+            <div class="container" id="shield-shield">
                 <div class="button-container mirror-button-container">
                     <button type="button" class="tab-button active-tab" id="normal">Normal</button>
                     <button type="button" class="tab-button" id="mirror">Mirror</button>
                 </div>
                 <div class="description-button-container">
 
-                    <strong>Barrel/Barrel</strong>
-                    <p>Kite/Kite</p>
+                    <strong>Shield/Shield</strong>
+                    <p>Barrel/Barrel → Kite/Kite</p>
 
                     <small>
                         <i class="fa-solid fa-circle-info"></i>
-                        <em>Note: At Scallop/Scallop, be sure to slice when all of the edges are on 1 side</em>
+                        <em>Note: When starting, be sure to slice when all of the edges are on 1 side</em>
                     </small>
 
                     <div class="button-container">
-                        <button type="button" class="odd-button active">Odd</button>
-                        <button type="button" class="even-button">Even</button>
+                        <button type="button" class="even-button active">Even</button>
+                        <button type="button" class="odd-button">Odd</button>
                     </div>
                 </div>
                 <div class="video-controls-container">
-                    <video src="../videos/barrels/barrel-barrel-odd.mp4" type="video/mp4" muted>
+                    <video src="../videos/squares/shield-shield-even.mp4" type="video/mp4" muted>
                     </video>
                     <div class="button-container">
                         <button class="control-button play-button">
@@ -64,23 +64,28 @@
                 </div>
             </div>
 
-            <div class="container" id="scallop-barrel">
+            <div class="container" id="muffin-shield">
                 <div class="button-container mirror-button-container">
                     <button type="button" class="tab-button active-tab" id="normal">Normal</button>
                     <button type="button" class="tab-button" id="mirror">Mirror</button>
                 </div>
                 <div class="description-button-container">
 
-                    <strong>Scallop/Barrel</strong>
-                    <p>4-2/Pair → Scallop/Scallop → Barrel/Barrel → Kite/Kite</p>
+                    <strong>Muffin/Shield</strong>
+                    <p>Scallop/Kite → Fist/Fist → Kite/Kite</p>
+
+                    <small>
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: At 4-1-1/L, move both layers to change which face you solve Scallop/Kite in</em>
+                    </small>
 
                     <div class="button-container">
-                        <button type="button" class="odd-button active">Odd</button>
-                        <button type="button" class="even-button">Even</button>
+                        <button type="button" class="even-button active">Even</button>
+                        <button type="button" class="odd-button">Odd</button>
                     </div>
                 </div>
                 <div class="video-controls-container">
-                    <video src="../videos/barrels/scallop-barrel-odd.mp4" type="video/mp4" muted>
+                    <video src="../videos/squares/muffin-shield-even.mp4" type="video/mp4" muted>
                     </video>
                     <div class="button-container">
                         <button class="control-button play-button">
@@ -93,122 +98,97 @@
                 </div>
             </div>
 
-            <div class="container" id="shield-barrel">
+            <div class="container" id="leftpawn-shield">
                 <div class="button-container mirror-button-container">
                     <button type="button" class="tab-button active-tab" id="normal">Normal</button>
                     <button type="button" class="tab-button" id="mirror">Mirror</button>
                 </div>
                 <div class="description-button-container">
 
-                    <strong>Shield/Barrel</strong>
-                    <p>Pair/2-2-2 → Shield/Shield → Barrel/Barrel → Kite/Kite</p>
+                    <strong>Left Pawn/Shield</strong>
+                    <p>5-1/Pair → Scallop/Kite → Fist/Fist → Kite/Kite</p>
+
+                    <small>
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: When starting, be sure to slice when all of the edges are on 1 side</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="even-button active">Even</button>
+                        <button type="button" class="odd-button">Odd</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/squares/leftpawn-shield-even.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container exception" id="rightpawn-shield">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Right Pawn/Shield</strong>
+                    <p>5-1/Pair → Scallop/Kite → Fist/Fist → Kite/Kite</p>
 
                     <small style="display: block;">
                         <i class="fa-solid fa-circle-info"></i>
-                        <em>Note: Hold shield on the right, and solve Pair/2-2-2 such that Shield/Shield ends up in the
+                        <em>Note: When starting, be sure to slice when all of the edges are on 1 side</em>
+                    </small>
+
+                    <div class="button-container">
+                        <button type="button" class="even-button active">Even</button>
+                        <button type="button" class="odd-button">Odd</button>
+                    </div>
+                </div>
+                <div class="video-controls-container">
+                    <video src="../videos/squares/rightpawn-shield-even.mp4" type="video/mp4" muted>
+                    </video>
+                    <div class="button-container">
+                        <button class="control-button play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="control-button pause-button">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="fist-shield">
+                <div class="button-container mirror-button-container">
+                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
+                    <button type="button" class="tab-button" id="mirror">Mirror</button>
+                </div>
+                <div class="description-button-container">
+
+                    <strong>Right Fist/Shield</strong>
+                    <p>3-3/L → Pawn/Pawn → Fist/Fist → Kite/Kite</p>
+
+                    <small style="display: block;">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <em>Note: Position the shield on the right, and solve 3-3/L such that Pawn/Pawn ends up in the
                             front</em>
                     </small>
 
                     <div class="button-container">
-                        <button type="button" class="odd-button active">Odd</button>
-                        <button type="button" class="even-button">Even</button>
+                        <button type="button" class="even-button active">Even</button>
+                        <button type="button" class="odd-button">Odd</button>
                     </div>
                 </div>
                 <div class="video-controls-container">
-                    <video src="../videos/barrels/shield-barrel-odd.mp4" type="video/mp4" muted>
-                    </video>
-                    <div class="button-container">
-                        <button class="control-button play-button">
-                            <i class="fa-solid fa-play"></i>
-                        </button>
-                        <button class="control-button pause-button">
-                            <i class="fa-solid fa-pause"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container exception" id="muffin-barrel">
-                <div class="button-container mirror-button-container">
-                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
-                    <button type="button" class="tab-button" id="mirror">Mirror</button>
-                </div>
-                <div class="description-button-container">
-
-                    <strong>Muffin/Barrel</strong>
-                    <p>Shield/Kite → L/3-1-2 → Shield/Square → Fist/Fist → Kite/Kite</p>
-
-                    <small style="display: block;">
-                        <i class="fa-solid fa-circle-info"></i>
-                        <em>Note: Slice away the line from muffin to go into Shield/Kite. Also, solve Shield/Kite with
-                            the kite facing you</em>
-                    </small>
-
-                    <div class="button-container">
-                        <button type="button" class="odd-button active">Odd</button>
-                        <button type="button" class="even-button">Even</button>
-                    </div>
-                </div>
-                <div class="video-controls-container">
-                    <video src="../videos/barrels/pawn-barrel-odd.mp4" type="video/mp4" muted>
-                    </video>
-                    <div class="button-container">
-                        <button class="control-button play-button">
-                            <i class="fa-solid fa-play"></i>
-                        </button>
-                        <button class="control-button pause-button">
-                            <i class="fa-solid fa-pause"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container" id="pawn-barrel">
-                <div class="button-container mirror-button-container">
-                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
-                    <button type="button" class="tab-button" id="mirror">Mirror</button>
-                </div>
-                <div class="description-button-container">
-
-                    <strong>Pawn/Barrel</strong>
-                    <p>5-1/Pair → Scallop/Kite → Fist/Fist → Kite/Kite</p>
-
-                    <div class="button-container">
-                        <button type="button" class="odd-button active">Odd</button>
-                        <button type="button" class="even-button">Even</button>
-                    </div>
-                </div>
-                <div class="video-controls-container">
-                    <video src="../videos/barrels/pawn-barrel-odd.mp4" type="video/mp4" muted>
-                    </video>
-                    <div class="button-container">
-                        <button class="control-button play-button">
-                            <i class="fa-solid fa-play"></i>
-                        </button>
-                        <button class="control-button pause-button">
-                            <i class="fa-solid fa-pause"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container" id="fist-barrel">
-                <div class="button-container mirror-button-container">
-                    <button type="button" class="tab-button active-tab" id="normal">Normal</button>
-                    <button type="button" class="tab-button" id="mirror">Mirror</button>
-                </div>
-                <div class="description-button-container">
-
-                    <strong>Fist/Barrel</strong>
-                    <p>Pawn/Muffin → 4-2/Pair → Scallop/Scallop → Barrel/Barrel → Kite/Kite</p>
-
-                    <div class="button-container">
-                        <button type="button" class="odd-button active">Odd</button>
-                        <button type="button" class="even-button">Even</button>
-                    </div>
-                </div>
-                <div class="video-controls-container">
-                    <video src="../videos/barrels/fist-barrel-odd.mp4" type="video/mp4" muted>
+                    <video src="../videos/squares/fist-shield-even.mp4" type="video/mp4" muted>
                     </video>
                     <div class="button-container">
                         <button class="control-button play-button">
@@ -223,7 +203,7 @@
 
         </div>
     </main>
-    <script src="../js/barrels.js"></script>
+    <script src="../js/shields.js"></script>
 </body>
 
 </html>
