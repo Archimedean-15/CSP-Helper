@@ -132,12 +132,13 @@ evenButtons.forEach((evenButton) => {
                 video.src = "../videos/scallops/shield-scallop-even.mp4";
                 noteText.textContent = "Note: Solve with scallop on the right, and solve such that Scallop/Scallop ends up in the back";
             } else if (container.id === 'muffin-scallop') {
+                paragraph.textContent = "Pair/5-1 → Kite/Scallop → Fist/Fist → Kite/Kite";
                 video.src = "../videos/scallops/muffin-scallop-even.mp4";
                 noteText.textContent = "Note: Solve with scallop on the left, and solve with the 3 edges on the muffin farthest away from you";
             } else if (container.id === 'pawn-scallop') {
                 paragraph.textContent = "5-1/Pair → Kite/Scallop → Fist/Fist → Kite/Kite";
                 video.src = "../videos/scallops/pawn-scallop-even.mp4";
-                noteText.textContent = "Note: Break apart the scallop and preserve the pawn to make the 5-1/Pair";
+                noteText.textContent = "Note: Preserve the scallop and break apart the pawn to make the 5-1/Pair";
             } else if (container.id === 'fist-scallop') {
                 video.src = "../videos/scallops/fist-scallop-even.mp4";
                 noteText.textContent = "Note: Make sure the pair doesn't touch the slice when solving into Pair/5-1";
@@ -156,7 +157,7 @@ evenButtons.forEach((evenButton) => {
             } else if (container.id === 'pawn-scallop') {
                 paragraph.textContent = "5-1/Pair → Scallop/Kite → Fist/Fist → Kite/Kite";
                 video.src = "../videos/scallops/scallop-pawn-even.mp4";
-                noteText.textContent = "Note: Break apart the scallop and preserve the pawn to make the 5-1/Pair";
+                noteText.textContent = "Note: Preserve the scallop and break apart the pawn to make the 5-1/Pair";
             } else if (container.id === 'fist-scallop') {
                 video.src = "../videos/scallops/scallop-fist-even.mp4";
                 noteText.textContent = "Note: Make sure the pair doesn't touch the slice when solving into 5-1/Pair";
