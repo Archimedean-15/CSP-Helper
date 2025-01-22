@@ -6,6 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSP Helper</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .tracing-patterns-container {
+            display: flex;
+            flex-direction: column;  /* Stack the child divs vertically */
+            gap: 20px;  /* Space between divs vertically */
+        }
+
+        .tracing-patterns-container div {
+            display: flex;
+            flex-wrap: wrap;  /* Allow wrapping if necessary */
+            justify-content: flex-start;  /* Align images to the left */
+            
+        }
+        .tracing-patterns-container > div {
+            border: 1px solid blue;
+            
+        }
+
+        img {
+            width: 80px;  /* Set a fixed width for the images */
+            height: auto;  /* Maintain aspect ratio */
+            max-width: 80px;  /* Limit the maximum width to 80px */
+            min-width: 60px;  /* Optional: set a minimum width to ensure images are not too small */
+        }
+        h3 {
+            white-space: nowrap;
+            height: 100%;
+            border: 1px solid orange;
+        }
+        figure {
+            border: 1px solid red;
+        }
+        .shapes {
+            border: 1px solid green;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -35,130 +73,148 @@
 
         <div class="tracing-patterns-container">
             <div class="0-edges">
-                <figure>
-                    <img src="tracing imgs/0 edges/star.png">
-                    <figcaption>Star</figcaption>
-                </figure>
+                <div class="num-edges">
+                    <h3>0 edges</h3>
+                </div>
+                
+                <div class="shapes">
+                    <figure>
+                        <img src="tracing imgs/0 edges/star.png">
+                        <figcaption>Star</figcaption>
+                    </figure>
+                </div>
             </div>
             <div class="2-edges">
-                <figure>
-                    <img src="tracing imgs/2 edges/pair.png">
-                    <figcaption>Pair</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/2 edges/L.png">
-                    <figcaption>L</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/2 edges/line.png">
-                    <figcaption>Line</figcaption>
-                </figure>
+                <h3>2 edges</h3>
+                <div class="shapes">
+                    <figure>
+                        <img src="tracing imgs/2 edges/pair.png">
+                        <figcaption>Pair</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/2 edges/L.png">
+                        <figcaption>L</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/2 edges/line.png">
+                        <figcaption>Line</figcaption>
+                    </figure>
+                </div>
             </div>
             <div class="4-edges">
-                <figure>
-                    <img src="tracing imgs/4 edges/square.png">
-                    <figcaption>Square</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/4 edges/kite.png">
-                    <figcaption>Kite</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/4 edges/barrel.png">
-                    <figcaption>Barrel</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/4 edges/scallop.png">
-                    <figcaption>Scallop</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/4 edges/shield.png">
-                    <figcaption>Shield</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/4 edges/muffin.png">
-                    <figcaption>Muffin</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/4 edges/left pawn.png">
-                    <figcaption>Left Pawn</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/4 edges/right pawn.png">
-                    <figcaption>Right Pawn</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/4 edges/left fist.png">
-                    <figcaption>Left Fist</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/4 edges/right fist.png">
-                    <figcaption>Right Fist</figcaption>
-                </figure>
-            </div>
+                <h3>4 edges</h3>
+                <div class="shapes">
+                    <figure>
+                        <img src="tracing imgs/4 edges/square.png">
+                        <figcaption>Square</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/4 edges/kite.png">
+                        <figcaption>Kite</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/4 edges/barrel.png">
+                        <figcaption>Barrel</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/4 edges/scallop.png">
+                        <figcaption>Scallop</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/4 edges/shield.png">
+                        <figcaption>Shield</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/4 edges/muffin.png">
+                        <figcaption>Muffin</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/4 edges/left pawn.png">
+                        <figcaption>Left Pawn</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/4 edges/right pawn.png">
+                        <figcaption>Right Pawn</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/4 edges/left fist.png">
+                        <figcaption>Left Fist</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/4 edges/right fist.png">
+                        <figcaption>Right Fist</figcaption>
+                    </figure>
+                </div> 
+            </div> 
             <div class="6-edges">
-                <figure>
-                    <img src="tracing imgs/6 edges/left 4-2.png">
-                    <figcaption>Left 4-2</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/6 edges/right 4-2.png">
-                    <figcaption>Right 4-2</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/6 edges/left 5-1.png">
-                    <figcaption>Left 5-1</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/6 edges/right 5-1.png">
-                    <figcaption>Right 5-1</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/6 edges/6.png">
-                    <figcaption>6</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/6 edges/2-2-2.png">
-                    <figcaption>2-2-2</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/6 edges/3-3.png">
-                    <figcaption>3-3</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/6 edges/4-1-1.png">
-                    <figcaption>4-1-1</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/6 edges/3-2-1.png">
-                    <figcaption>3-2-1</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/6 edges/3-1-2.png">
-                    <figcaption>3-1-2</figcaption>
-                </figure>
+                <h3>6 edges</h3>
+                <div class="shapes">
+                    <figure>
+                        <img src="tracing imgs/6 edges/left 4-2.png">
+                        <figcaption>Left 4-2</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/6 edges/right 4-2.png">
+                        <figcaption>Right 4-2</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/6 edges/left 5-1.png">
+                        <figcaption>Left 5-1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/6 edges/right 5-1.png">
+                        <figcaption>Right 5-1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/6 edges/6.png">
+                        <figcaption>6</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/6 edges/2-2-2.png">
+                        <figcaption>2-2-2</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/6 edges/3-3.png">
+                        <figcaption>3-3</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/6 edges/4-1-1.png">
+                        <figcaption>4-1-1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/6 edges/3-2-1.png">
+                        <figcaption>3-2-1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/6 edges/3-1-2.png">
+                        <figcaption>3-1-2</figcaption>
+                    </figure>
+                </div>
             </div>
             <div class="8-edges">
-                <figure>
-                    <img src="tracing imgs/8 edges/8.PNG">
-                    <figcaption>8</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/8 edges/4-4.png">
-                    <figcaption>4-4</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/8 edges/6-2.png">
-                    <figcaption>6-2</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/8 edges/5-3.png">
-                    <figcaption>5-3</figcaption>
-                </figure>
-                <figure>
-                    <img src="tracing imgs/8 edges/7-1.png">
-                    <figcaption>7-1</figcaption>
-                </figure>
+                <h3>8 edges</h3>
+                <div class="shapes">
+                    <figure>
+                        <img src="tracing imgs/8 edges/8.PNG">
+                        <figcaption>8</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/8 edges/4-4.png">
+                        <figcaption>4-4</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/8 edges/6-2.png">
+                        <figcaption>6-2</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/8 edges/5-3.png">
+                        <figcaption>5-3</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="tracing imgs/8 edges/7-1.png">
+                        <figcaption>7-1</figcaption>
+                    </figure>
+                </div>
             </div>
 
         </div>
